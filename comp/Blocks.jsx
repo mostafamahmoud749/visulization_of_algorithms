@@ -67,7 +67,7 @@ export default function Blocks({
       ? 'bg-green-400'
       : isActive
         ? 'bg-red-400'
-        : 'bg-white dark:bg-gray-800';
+        : 'bg-white ';
 
     return (
       <div
@@ -75,9 +75,9 @@ export default function Blocks({
         className={`
           min-w-14 h-14 px-4 sm:min-w-16 sm:h-16
           flex items-center justify-center
-          rounded-xl border border-gray-300 dark:border-gray-700
-          text-gray-800 dark:text-gray-100
-          shadow-sm hover:shadow-md hover:border-gray-400 dark:hover:border-gray-600
+          rounded-xl border border-gray-300 
+          text-gray-800 
+          shadow-sm hover:shadow-md hover:border-gray-400 
           transition-colors duration-200
           ${bg}
         `}
@@ -89,17 +89,11 @@ export default function Blocks({
 
   return (
     <div
-      className="
-      flex flex-wrap gap-3 justify-center items-center
-      p-4 rounded-2xl border border-gray-200 bg-gray-50
-      dark:bg-gray-900 dark:border-gray-800
-    "
-    
-    //
+      className="flex flex-wrap items-center justify-center gap-3 p-4 border border-gray-200 rounded-2xl bg-gray-50"
     >
       {showBlocks}
       {stepIndex === steps.length - 1 && found === -1 && (
-        <p className="text-red-500 text-sm mt-2">Target not found</p>
+        <p className="mt-2 text-sm text-red-500">Target not found</p>
       )}
     </div>
   );
