@@ -12,7 +12,6 @@ export default function Blocks({
 }) {
   const lastLenRef = useRef(steps?.length ?? 0);
   const timerRef = useRef(null);
- 
   useEffect(() => {
     const len = Array.isArray(steps) ? steps.length : 0;
     const prevLen = lastLenRef.current;
