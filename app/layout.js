@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className="flex flex-col items-center min-h-screen bg-linear-to-br from-gray-50 to-gray-200 py-2 px-6">
           <Navs/>
