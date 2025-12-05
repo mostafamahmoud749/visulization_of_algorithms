@@ -12,7 +12,7 @@ export default function Blocks({
 }) {
   const lastLenRef = useRef(steps?.length ?? 0);
   const timerRef = useRef(null);
-
+ 
   useEffect(() => {
     const len = Array.isArray(steps) ? steps.length : 0;
     const prevLen = lastLenRef.current;
@@ -95,6 +95,8 @@ export default function Blocks({
       p-4 rounded-2xl border border-gray-200 bg-gray-50
       dark:bg-gray-900 dark:border-gray-800
     "
+    
+    //
     >
       {showBlocks}
       {stepIndex === steps.length - 1 && found === -1 && (

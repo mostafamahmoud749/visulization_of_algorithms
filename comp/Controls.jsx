@@ -9,13 +9,10 @@ function Controls({
   setInputValue,
   toggleState,
   setSpeed,
-  // running,
-  // setRunning,
   list,
-  // selectedCount,
   toggleReset,
-  setTarget, // already in props
-  target, // ADD: pass current target value from parent
+  setTarget,
+  target,
 }) {
   const showOptions = options.map((opt) => (
     <label key={opt} className="flex items-center space-x-2 cursor-pointer">
@@ -47,8 +44,8 @@ function Controls({
   };
   return (
     <>
-      <div className="flex gap-4 items-center mb-6">{showOptions}</div>
-      <div className="flex gap-6 mb-8">
+      <div className="flex gap-4 items-center mb-4">{showOptions}</div>
+      <div className="flex gap-6 mb-4">
         {/* List number input */}
         <input
           type="number"
